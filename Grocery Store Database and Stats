@@ -1,0 +1,28 @@
+--Create a Grocery Store Database
+
+CREATE TABLE Produce ( id INTEGER PRIMARY KEY, Item TEXT, Price INTEGER, Color TEXT, Promotion TEXT);
+
+INSERT into Produce VALUES (1, "Lemons", 2, "Yellow", "Sale");
+INSERT into Produce VALUES (2, "Raspberry", 1, "Red", "Regular");
+INSERT into Produce VALUES (3, "Apple" , 3, "Green", "Regular");
+INSERT into Produce VALUES (4, "Asparagus", 2, "Green", "Sale");
+INSERT into Produce VALUES (5, "Kale", 1, "Green", "Regular");
+INSERT into Produce VALUES (6, "Mushrooms", 2, "Brown", "Sale");
+INSERT into Produce VALUES (7, "Sweet Onion", 1, "Yellow", "Regular");
+INSERT into Produce VALUES (8, "Oranges",2,"Orange", "Regular");
+INSERT into Produce VALUES (9, "Mango", 1, "Red", "Sale");
+INSERT into Produce VALUES (10, "Strawberry",1, "Red", "Sale");
+INSERT into Produce VALUES (11, "Garlic", 1,"White", "Regular");
+INSERT into Produce VALUES (12, "Celery", 1, "Green" , "Sale");
+INSERT into Produce VALUES (13, "Peaches", 1, "Orange" , "Sale");
+INSERT into Produce VALUES (14, "Grapes", 1, "Red", "Regular");
+INSERT into Produce VALUES (15, "Limes", 1, "Green", "Sale");
+
+--Display the database ordered by price
+SELECT * FROM Produce 
+ORDER BY price desc;
+
+--What was the average price of the green colored produce?
+SELECT AVG (price) "Avg Price of Green Produce"
+FROM Produce 
+where Color='Green';

@@ -402,3 +402,6 @@ SELECT * from astronauts where space_walks_hr < 7 and status = "Active";
 
 SELECT * from astronauts;
 SELECT * from astronauts where undergraduate_major = "Geology" or graduate_major = "Geology";
+
+
+

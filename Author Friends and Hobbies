@@ -1,0 +1,48 @@
+
+/* Create table about the people and what they do here */
+
+CREATE TABLE authors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    book_title TEXT,
+    genre TEXT);
+    
+INSERT INTO authors (name, book_title, genre) VALUES ("Kate Jones", "Red Fish", "Fiction");
+INSERT INTO authors (name, book_title, genre) VALUES ("Liz Smith", "Moon", "Nonfiction");
+INSERT INTO authors (name, book_title, genre) VALUES ("Maggie Stevens", "Dog Days", "Fiction");
+INSERT INTO authors (name, book_title, genre) VALUES ("Anna Marks", "Driving West", "Fiction");
+
+CREATE TABLE hobbies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id INTEGER,
+    name TEXT);
+    
+INSERT INTO hobbies (person_id, name) VALUES (1, "skiing");
+INSERT INTO hobbies (person_id, name) VALUES (1, "gardening");
+INSERT INTO hobbies (person_id, name) VALUES (2, "baking");
+INSERT INTO hobbies (person_id, name) VALUES (2, "skiing");
+INSERT INTO hobbies (person_id, name) VALUES (3, "drawing");
+INSERT INTO hobbies (person_id, name) VALUES (4, "drawing");
+INSERT INTO hobbies (person_id, name) VALUES (4, "gardening");
+
+CREATE TABLE friends (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person1_id INTEGER,
+    person2_id INTEGER);
+    
+INSERT INTO friends (person1_id, person2_id) VALUES ("1","2");
+INSERT INTO friends (person1_id, person2_id) VALUES ("3","4");
+
+SELECT a.name, h.name
+FROM authors a
+JOIN hobbies h
+ON a.id=h.person_id;
+
+SELECT a.name,b.name
+FROM friends
+JOIN authors a
+ON a.id=friends.person1_id
+JOIN authors b
+ON b.id=friends.person2_id;
+
+

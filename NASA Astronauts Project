@@ -1,3 +1,9 @@
+*Here I am making my own relevant connections from the data in the astronauts table. First, I found the minimum, maximum, and average hours of space walks.
+Second, I wanted to display only the astronauts with over 7 hours of space walks which was the average number of hours of space walks. 
+Third, I wanted to give the astronauts a ranking based on the hours of space walks they completed. 
+Fourth, I was curious which astronauts had under the average number of space walk hours and were still "active" astronauts. 
+Last, I wanted to see which astronauts had studied "Geology" either in their undergraduate or graduate studies.*
+
 /* Source:
   https://www.kaggle.com/nasa/astronaut-yearbook
 */

@@ -34,13 +34,13 @@ CREATE TABLE friends (
 INSERT INTO friends (person1_id, person2_id) VALUES ("1","2");
 INSERT INTO friends (person1_id, person2_id) VALUES ("3","4");
 
---Show the authors and their hobbies.
+--Show the authors and the hobbies they have in common.
 SELECT a.name, h.name
 FROM authors a
 JOIN hobbies h
 ON a.id=h.person_id;
 
---Show the authors and the hobbies they have in common.
+--Show the authors that are friends because of their similar hobbies. 
 SELECT a.name,b.name
 FROM friends
 JOIN authors a

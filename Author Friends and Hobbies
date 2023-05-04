@@ -1,5 +1,6 @@
 
-/* Create table about the people and what they do here */
+/* In this project, I made my own table with some small set of “famous people”, 
+then made more tables about things they do and joined those to create nice human readable lists. */
 
 CREATE TABLE authors (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -33,11 +34,13 @@ CREATE TABLE friends (
 INSERT INTO friends (person1_id, person2_id) VALUES ("1","2");
 INSERT INTO friends (person1_id, person2_id) VALUES ("3","4");
 
+--Show the authors and their hobbies.
 SELECT a.name, h.name
 FROM authors a
 JOIN hobbies h
 ON a.id=h.person_id;
 
+--Show the authors and the hobbies they have in common.
 SELECT a.name,b.name
 FROM friends
 JOIN authors a
